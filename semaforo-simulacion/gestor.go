@@ -38,8 +38,8 @@ func (g *GestorTrafico) GenerarVehiculoEW() {
 }
 
 func (g *GestorTrafico) IniciarGeneracionNS() {
-	ticker := time.NewTicker(g.IntervaloGeneracionNS)
-	go func() {
+	ticker := time.NewTicker(g.IntervaloGeneracionNS) 
+	go func() {//se usa gourotine para que no se bloquee el programa y para vehiculos en sentido norte-sur
 		for {
 			select {
 			case <-ticker.C:
@@ -54,7 +54,7 @@ func (g *GestorTrafico) IniciarGeneracionNS() {
 
 func (g *GestorTrafico) IniciarGeneracionEW() {
 	ticker := time.NewTicker(g.IntervaloGeneracionEW)
-	go func() {
+	go func() {//se usa gourotine para que no se bloquee el programa y para vehiculos en sentido este-oeste
 		for {
 			select {
 			case <-ticker.C:

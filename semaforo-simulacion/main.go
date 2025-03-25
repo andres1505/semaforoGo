@@ -42,7 +42,7 @@ func main() {
 	vehiculosChan := make(chan []VehiculoData, 10)
 
 	// Actualizar interfaz periódicamente
-	go func() {
+	go func() {//gouroutine para actualizar la interfaz cada 50 milisegundos
 		ticker := time.NewTicker(50 * time.Millisecond)
 		for range ticker.C {
 			// Actualizar semáforos

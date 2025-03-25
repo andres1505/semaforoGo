@@ -11,6 +11,9 @@ type ControladorSemaforos struct {
 }
 
 // Iniciar comienza el ciclo de cambios de semáforos
+//Se usa una goroutine para manejar el ciclo automático de los semáforos sin bloquear el hilo principal:
+//Se crea un ticker que se ejecuta cada Intervalo de tiempo y se ejecuta un ciclo select que espera a que el ticker envíe una señal o que se envíe una señal para detener el ciclo.
+//Cuando se recibe una señal de detener, se detiene el ticker y la goroutine termina.
 func (c *ControladorSemaforos) Iniciar() {
 	ticker := time.NewTicker(c.Intervalo)
 	go func() {
