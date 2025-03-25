@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+#city-container {
+    width: 500px;
+    height: 500px;
+    margin: 20px auto;
+    position: relative;
+    background-color: #f0f0f0;
+    border: 2px solid #333;
+    overflow: hidden;
+}
+
+.ns-street {
+    width: 100px;
+    height: 100%;
+    left: 200px;
+    background-color: #555;
+    position: absolute;
+}
+
+.ew-street {
+    width: 100%;
+    height: 100px;
+    top: 200px;
+    background-color: #555;
+    position: absolute;
+}
+
+.cross {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 200px;
+    top: 200px;
+    background-color: #777;
+    z-index: 1;
+}
+
+.traffic-light {
+    width: 30px;
+    height: 60px;
+    position: absolute;
+    border: 2px solid #000;
+    background-color: #333;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.ns-light {
+    left: 250px;
+    top: 50px;
+}
+
+.ew-light {
+    left: 50px;
+    top: 250px;
+}
+
+.vehicle {
+    width: 20px;
+    height: 10px;
+    position: absolute;
+    border-radius: 3px;
+    z-index: 5;
+    transition: left 0.1s linear, top 0.1s linear;
+}
+
+.vehicle.ns {
+    left: 240px;
+}
+
+.vehicle.ew {
+    top: 245px;
+}
+
+#controls {
+    margin: 20px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+button#stop-btn {
+    background-color: #f44336;
+}
+
+#status {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    display: inline-block;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#status p {
+    margin: 5px 0;
+}

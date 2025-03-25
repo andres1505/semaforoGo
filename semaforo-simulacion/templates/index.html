@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación de Cruce Semafórico</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    <h1>Simulación de Cruce Semafórico</h1>
+    
+    <div id="city-container">
+        <div class="street ns-street"></div>
+        <div class="street ew-street"></div>
+        <div class="cross"></div>
+        
+        <div class="traffic-light ns-light"></div>
+        <div class="traffic-light ew-light"></div>
+    </div>
+    
+    <div id="controls">
+        <button id="start-btn">Iniciar Simulación</button>
+        <button id="stop-btn" disabled>Detener Simulación</button>
+    </div>
+    
+    <div id="status">
+        <p>Semáforo NS: <span id="ns-status">rojo</span></p>
+        <p>Semáforo EW: <span id="ew-status">verde</span></p>
+    </div>
+    
+    <script src="/assets/script.js"></script>
+</body>
+</html>
